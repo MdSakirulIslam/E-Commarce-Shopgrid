@@ -18,28 +18,28 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header border-bottom">
-                    <h3 class="card-title">Left Label Alignment</h3>
+                    <h3 class="card-title">Brand form</h3>
                 </div>
                 <div class="card-body">
-                    <p class="text-muted">It is Very Easy to Customize and it uses in your website apllication.</p>
-                    <form class="form-horizontal" action="" method="post">
+                    <p class="text-muted">{{session('message')}}</p>
+                    <form class="form-horizontal" action="{{route('brand.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-4">
                             <label for="firstName" class="col-md-3 form-label">Brand Name</label>
                             <div class="col-md-9">
-                                <input class="form-control" id="BrandName" placeholder="Brand Name" type="text" name="name"/>
+                                <input class="form-control" id="CategoryName" placeholder="Brand Name" type="text" name="name"/>
                             </div>
                         </div>
                         <div class="row mb-4">
                             <label for="lastName" class="col-md-3 form-label">Brand Description</label>
                             <div class="col-md-9">
-                                <textarea name="description" class="form-control" placeholder="Category Description"></textarea>
+                                <textarea name="description" class="form-control" placeholder="Brand Description"></textarea>
                             </div>
                         </div>
                         <div class="row mb-4">
                             <label for="email" class="col-md-3 form-label">Brand Image</label>
                             <div class="col-md-9">
-                                <input class="form-control" id="BrandImage" name="image" placeholder="Brand Image" type="file">
+                                <input class="form-control" id="email" type="file" name="image"/>
                             </div>
                         </div>
                         <div class="row">
@@ -55,9 +55,8 @@
             </div>
         </div>
     </div>
-    <!-- /row -->
     </div>
+    <!-- /row -->
+
 @endsection
-
-
 

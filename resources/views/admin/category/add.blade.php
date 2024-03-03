@@ -22,7 +22,7 @@
                 </div>
                 <div class="card-body">
                     <p class="text-muted">{{session('message')}}</p>
-                    <form class="form-horizontal" action="" method="post">
+                    <form class="form-horizontal" action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row mb-4">
                             <label for="firstName" class="col-md-3 form-label">Category Name</label>
@@ -37,9 +37,9 @@
                             </div>
                         </div>
                         <div class="row mb-4">
-                            <label for="email" class="col-md-3 form-label">Category Image</label>
+                            <label for="email" class="col-md-3 form-label">Sub Category Image</label>
                             <div class="col-md-9">
-                                <input class="form-control" id="CategoryImage" name="image" placeholder="Category Image" type="file">
+                                <input class="form-control" id="email" type="file" name="image"/>
                             </div>
                         </div>
                         <div class="row">
@@ -55,7 +55,8 @@
             </div>
         </div>
     </div>
-    <!-- /row -->
     </div>
+    <!-- /row -->
+
 @endsection
 
